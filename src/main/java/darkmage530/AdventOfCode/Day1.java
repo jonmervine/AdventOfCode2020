@@ -17,12 +17,12 @@ public class Day1 {
 //        Pair<Integer, Integer> valuesForTarget = day1.findTargetEntries(Stream.of(5, 10, 100, 5500, 3000, 2010).collect(Collectors.toList()), 2020);
 //        valuesForTarget.getKey();
 
-        Pair<Integer, Integer> valuesForTarget = day1.findTargetEntries(Utilities.readFile("day1input.txt"), 2020);
+        Pair<Integer, Integer> valuesForTarget = day1.findTargetEntries(Utilities.getIntsFromFile("day1input.txt"), 2020);
         System.out.println("Answer: " + valuesForTarget.getKey() + ", " + valuesForTarget.getValue());
         int product = valuesForTarget.getKey() * valuesForTarget.getValue();
         System.out.println("Product: " + product);
 
-        int threeProduct = day1.findTargetEntriesWithThree(Utilities.readFile("day1input.txt"), 2020);
+        int threeProduct = day1.findTargetEntriesWithThree(Utilities.getIntsFromFile("day1input.txt"), 2020);
         System.out.println("ThreeProduct: " + threeProduct);
     }
 
